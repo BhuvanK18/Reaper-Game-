@@ -1,0 +1,176 @@
+<!-- GAME'S HTML SHEET! -->
+<!DOCTYPE html>
+<html>
+   <head>
+      <!-- STYLING SHEET FOR GAME -->
+      <link rel="stylesheet" type="text/css" href="StyleSheets/howtoplay.css">
+      <link rel="stylesheet" type="text/css" href="StyleSheets/loading page.css">
+      <link rel="stylesheet" type="text/css" href="StyleSheets/Difficulty.css">
+      <link rel="stylesheet" type="text/css" href="StyleSheets/Level1.css">
+      <link rel="stylesheet" type="text/css" href="StyleSheets/controls.css">
+      <link rel="stylesheet" type="text/css" href="StyleSheets/Phoenix.css">
+      <title>Phoenix</title>
+   </head>
+   <body>
+   	<!--LOADING ANIMATION OF THE GAME  -->
+      <h2 class="animate" id="loading">Loading....</h2>
+      <!-- BACKGROUND OF THE WEB PAGE-->
+      <div id="background">
+         <!-- BODY BOX OF GAME -->
+         <div id="box">
+            <!-- START PAGE -->
+            
+            <!-- SETTINGS BAR -->
+            <div id="settingsBar">
+               <img src="images/no-music.png" id="nMusic" onclick="nMusic()">
+               <img src="images/music.png" id="Music" onclick="Music()">
+               <span style="width: 20px"></span>
+               <img src="images/home.png" id="homeButton" onclick="homeButton()">
+               <span style="width: 20px"></span>
+               <img src="images/back.png" id="backButton" onclick="backButton()">
+            </div>
+            <!-- MAIN MENU -->
+            <div id="menu">
+               <ul type="none" style="text-align: center;" id="mainMenu">
+                  <li>
+                     <h2>Menu</h2>
+                  </li>
+                  <li>Start</li>
+                  <li>Controls</li>
+                  <li>How to Play</li>
+                  <li>Difficulty</li>
+               </ul>
+               <!-- COMING SOON ANIMATION -->
+               <h2 class="animate" id="comingSoon">Coming Soon....</h2>
+               <!-- HOW TO PLAY -->
+               <div id="HOW2PLAY">
+                  <h1>HOW TO PLAY</h1>
+                  <h3>TO MOVE AROUND</h3>
+                  <p>1. Press left arrow key to move in left direction </p>
+                  <P>2. Press right arrow key to move in left direction </p>
+                  <h3>TO JUMP UP AND MOVE DOWN</h3>
+                  <p>1. Press up arrow key to jump</p>
+                  <h3>PLATFORM</h3>
+                  <p>1. It is a safe surface to jump on to protect from toxic substance and enemy </p>
+                  <h3>GRASS</h3>
+                  <p>1. Walk past the grass</p>
+                  <p>2. If you jump over it, it will poison you and will reduce health by 1</p>
+                  <h3>SPIKES</h3>
+                  <p>1. Do not jump or walk over spikes as it will reduce health by 1</p>
+                  <p>2. Jump over platform to avoid deduction of health</p>
+                  <h3>BUG</h3>
+                  <p>1. It can toxicate you faster than spikes and grass, will reduce health by 1</p>
+                  <p>2. To save the protagonist, jump over the bug to kill</p>
+                  <!-- <h3>TO HEAL AND PROTECT (coming soon)</h3>
+                     <p>RED FLAME - It helps protagonist to heal itself </p>
+                     <p>BLUE FLAME - It helps protagonist to avoid all health damage for next 15secs</p> -->
+               </div>
+               
+               <!-- START MENU -->
+               <ul type="none" style="text-align: center;" id="startMenu">
+                  <li>
+                     <h2>Levels</h2>
+                  </li>
+                  <li onclick="activeLevel()">Level 1</li>
+                  <div style="height: 30px"></div>
+                  <li onclick="activeLevel()">Level 2</li>
+               </ul>
+               <!-- CONTROLS MENU -->
+               <div id="controls">
+                  <h1>
+                     <center>CONTROLS</center>
+                  </h1>
+                  <table style="width:79%"  id="table">
+                     <tr>
+                        <th>ACTIONS</th>
+                        <th>KEYBOARD</th>
+                        <th>ARROW KEY</th>
+                     </tr>
+                     <tr class="highlight">
+                        <td>MOVE RIGHT</td>
+                        <td>RIGHT ARROW KEY</td>
+                        <td><img src="images/right.png" alt="right key" style="width:50px;height:50px;"></td>
+                     </tr>
+                     <tr class="highlight">
+                        <td>MOVE LEFT</td>
+                        <td>LEFT ARROW KEY</td>
+                        <td><img src="images/left.png" alt="left key" style="width:50px;height:50px;"></td>
+                     </tr>
+                     <tr class="highlight">
+                        <td>DOWN</td>
+                        <td>DOWN ARROW KEY</td>
+                        <td><img src="images/down.png" alt="left key" style="width:50px;height:50px;"></td>
+                     </tr>
+                     <tr class="highlight">
+                        <td>JUMP</td>
+                        <td>UP ARROW KEY</td>
+                        <td><img src="images/up.png" alt="up key" style="width:50px;height:50px;"></td>
+                     </tr>
+                  </table>
+               </div>
+               <!-- DIFFICULTY  MENU-->
+               <ul type="none" style="text-align: center;" id="diffMenu">
+                  <li>
+                     <h2>Difficulty</h2>
+                  </li>
+                  <li class="highlight" onclick="diffParameter(1)">Beginner</li>
+                  <img src="images/fire.png" id="DiffLev1">
+                  <li class="highlight" onclick="diffParameter(2)">Intermediate</li>
+                  <img src="images/fire.png" id="DiffLev2">
+                  <li class="highlight" onclick="diffParameter(3)">Veteran</li>
+                  <img src="images/fire.png" id="DiffLev3">
+               </ul>
+               <!-- WIN PAGE -->
+               <div class="center" id="winP">
+                  <h1 align ="center">
+                     GAME OVER <br>
+                     "You Won"
+                  </h1>
+               </div>
+               <!-- LOSS PAGE -->
+               <div class="center" id="lossP">
+                  <h1 align ="center">
+                     GAME OVER <br>
+                     "You Lost"
+                  </h1>
+               </div>
+               <!-- LEVEL1 -->
+               <div id="Level1">
+                  <div id="lives">
+                     <img src="images/fire.png" id="fire1">
+                     <img src="images/fire.png" id="fire2">
+                     <img src="images/fire.png" id="fire3">
+                  </div>
+                  <img src="images/land.jpg" id="land">
+                  <img src="images/tube.png" id="tube1">
+                  <img src="images/tube.png" id="tube2">
+                  <img src="images/spikes.png" id="spikes1">
+                  <img src="images/grass.png" id="grass">
+                  <img src="images/EnemyDrag.png" id="EnemyDrag">
+                  <img src="images/platform.png" id="platform1">
+                  <img src="images/platform.png" id="platform2">
+                  <img src="images/platform.png" id="platform3">
+                  <img src="images/standing(R).png" id="char1">
+                  <img src="images/jumping.png" id="char2">
+                  <img src="images/standing.png" id="char3">
+               </div>
+            </div>
+            <!-- !AUDIO -->
+            <div id="audio">
+               <audio  src="audio/intro.mp3" id="intro"></audio>
+               <audio src="audio/hurt.mp3" id="hurt"></audio>
+               <audio src="audio/jumpAudio.mp3" id="jumpAudio"></audio>
+               <audio src="audio/gameOver.mp3" id="gameOver"></audio>
+               <audio src="audio/gameVic.mp3" id="gameVic"></audio>
+            </div>
+         </div>
+      </div>
+      <!-- VARIOUS SCRIPTS USED -->
+      <!-- EXTERNAL LIBRARIES -->
+      <!-- JQUERY LIBRARY -->
+      <script src="Scripts/jquery.js"></script>
+      <!-- MAIN SCRIPT FILES -->
+      <script type="text/javascript" src="Scripts/Level-1.js"></script>
+      <script type="text/javascript" src="Scripts/Phoenix.js"></script>
+   </body>
+</html>

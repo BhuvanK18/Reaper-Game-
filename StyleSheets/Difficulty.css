@@ -1,0 +1,10 @@
+/*DIFFICULTY MENU CSS*/
+.highlight:hover{margin-left:32%;
+      background-color: #5c1500;
+      background-image: linear-gradient(315deg, #ff3c00 0%, #f0bdb0 74%);
+      box-shadow: inset 0.2 0.2 0.2em rgb(0, 0, 0);
+      border-radius: 25px 25px;
+      width: 25%;
+      height: 15%;
+      font-size: 1.6em;
+            }

@@ -1,0 +1,95 @@
+/*LEVEL 1 CSS*/
+
+#lives {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	justify-content: flex-end;
+	margin-left: 85%;
+}
+
+#char1 {
+	height: 160px;
+	width: 150px;
+}
+
+#char2 {
+	height: 160px;
+	width: 150px;
+}
+
+#char3 {
+	height: 160px;
+	width: 150px;
+}
+
+#spikes1 {
+	height: 100px;
+	width: 140px;
+	position: fixed;
+	margin-left: 640px;
+	margin-top: 490px;
+}
+
+#grass {
+	height: 300px;
+	width: 600px;
+	position: fixed;
+	margin-left: 50px;
+	margin-top: 425px;
+}
+
+#EnemyDrag {
+	height: 100px;
+	width: 100px;
+	position: fixed;
+	margin-left: 800px;
+	margin-top: 500px;
+}
+
+#platform1 {
+	height: 100px;
+	width: 200px;
+	position: fixed;
+	margin-left: 550px;
+	margin-top: 330px;
+}
+
+#platform2 {
+	height: 100px;
+	width: 200px;
+	position: fixed;
+	margin-left: 850px;
+	margin-top: 220px;
+}
+
+#platform3 {
+	height: 100px;
+	width: 200px;
+	position: fixed;
+	margin-left: 330px;
+	margin-top: 220px;
+}
+
+#land {
+	height: 49px;
+	width: 93.5%;
+	position: fixed;
+	margin-top: 38%;
+}
+
+#tube1 {
+	height: 250px;
+	width: 200px;
+	margin-top: 23%;
+	position: fixed;
+	margin-left: -45px;
+}
+
+#tube2 {
+	height: 250px;
+	width: 200px;
+	margin-top: 23%;
+	margin-left: 1280px;
+	position: fixed;
+}

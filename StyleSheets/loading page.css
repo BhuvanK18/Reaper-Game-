@@ -1,0 +1,25 @@
+/*LOADING PAGE CSS*/
+@keyframes load {
+    0%{
+        opacity: 0.08;
+		filter: blur(3px);
+		letter-spacing: 20px;
+        }
+}
+
+.animate {
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	height:100%;
+	margin: auto;
+	font-family: Helvetica, sans-serif, Arial;
+	animation: load 2.5s infinite 0s ease-in-out;
+	animation-direction: alternate;
+	text-shadow: 0 0 1px white;
+}
+body, html{
+	height: 96vh;
+	background-color: #111;
+	color: white;
+}
