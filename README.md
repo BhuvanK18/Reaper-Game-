@@ -11,5 +11,7 @@ New characters along with obstacles can easily be added and updated.
 
 Complete HOW TO PLAY guide and CONTROLS guide is provided within the game itself.
 
+P.S. Extract all the content in one place and run the Phoenix.html on any browser(preferably chrome).
+
 ENJOY EXPLORING THE GAME AND HAVE FUN :)
 
